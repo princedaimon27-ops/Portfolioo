@@ -80,14 +80,24 @@ const ProjectDetailPage = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="relative rounded-3xl overflow-hidden mb-12 border border-white/10 shadow-2xl h-[300px] md:h-[450px]"
+          className={`relative rounded-3xl overflow-hidden mb-12 border border-white/10 shadow-2xl bg-[#0D0D11] flex items-center justify-center ${
+            project.imageFit === 'contain'
+              ? 'aspect-[16/10] md:aspect-[2/1] p-2 sm:p-4'
+              : 'h-[300px] md:h-[450px]'
+          }`}
         >
           <img
             src={project.featuredImage}
             alt={project.title}
-            className="w-full h-full object-cover"
+            className={`w-full h-full ${
+              project.imageFit === 'contain'
+                ? `object-contain ${project.imagePadding || ''}`
+                : 'object-cover'
+            }`}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-60" />
+          {project.imageFit !== 'contain' && (
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-60 pointer-events-none" />
+          )}
         </motion.div>
 
         {/* Metadata Grid (Role, Timeline, Tools) */}

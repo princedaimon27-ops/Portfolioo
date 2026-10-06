@@ -40,3 +40,58 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #FF6B1A;
 }
+
+/* Seamless Marquee Infinite Carousel */
+@keyframes marquee-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.skills-carousel-container {
+  --marquee-duration: 30s;
+  --marquee-gap: 1.25rem;
+}
+
+.skills-carousel-track {
+  animation: marquee-scroll var(--marquee-duration, 30s) linear infinite;
+  will-change: transform;
+}
+
+.skills-carousel-container:hover .skills-carousel-track,
+.skills-carousel-container:focus-within .skills-carousel-track {
+  animation-play-state: paused;
+}
+
+.marquee-mask {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 64px,
+    black calc(100% - 64px),
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 64px,
+    black calc(100% - 64px),
+    transparent 100%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-carousel-track {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .skills-carousel-container {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+}

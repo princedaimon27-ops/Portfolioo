@@ -15,24 +15,33 @@ const ProjectCard = ({ project, index = 0 }) => {
     >
       <div>
         {/* Project Thumbnail Image Container */}
-        <div className="relative h-64 md:h-72 w-full overflow-hidden bg-neutral-900">
+        <Link
+          to={`/projects/${project.slug}`}
+          className="block relative aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden bg-[#0D0D11] border-b border-white/5"
+        >
           <img
             src={project.featuredImage}
             alt={project.title}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            className={`w-full h-full transition-transform duration-700 group-hover:scale-105 ${
+              project.imageFit === 'contain'
+                ? `object-contain ${project.imagePadding || ''}`
+                : 'object-cover'
+            }`}
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-80" />
-          
-          <div className="absolute top-4 left-4">
-            <Badge variant="orange" className="backdrop-blur-md bg-[#FF6B1A]/20">
-              {project.category}
-            </Badge>
-          </div>
-        </div>
+          {project.imageFit !== 'contain' && (
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-60 pointer-events-none" />
+          )}
+        </Link>
 
         {/* Card Body */}
         <div className="p-6 md:p-8">
+          <div className="mb-3">
+            <Badge variant="orange" className="backdrop-blur-md bg-[#FF6B1A]/10 border-[#FF6B1A]/30 text-[#FF6B1A]">
+              {project.category}
+            </Badge>
+          </div>
+
           <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#FF6B1A] transition-colors leading-snug">
             <Link to={`/projects/${project.slug}`}>
               {project.title}
