@@ -17,9 +17,12 @@ const Footer = () => {
           {/* Brand & Tagline */}
           <div>
             <Link to="/" className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 rounded-full bg-[#FF6B1A] flex items-center justify-center font-extrabold text-white text-sm">
-                PD
-              </div>
+              <img
+                src="/logo.png"
+                alt="PD Logo"
+                className="w-12 h-12 object-contain"
+                style={{ mixBlendMode: 'screen' }}
+              />
               <span className="font-extrabold text-xl tracking-wider text-white">
                 PRINCE DAIMON
               </span>
