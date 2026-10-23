@@ -40,6 +40,27 @@ const Button = ({
   const combinedClasses = `${baseStyles} ${variants[variant]} ${sizes[size]} group ${className}`;
 
   if (to) {
+    const isAnchor = to.startsWith('#');
+    if (isAnchor) {
+      const handleAnchorClick = (e) => {
+        if (onClick) onClick(e);
+        const targetId = to.replace('#', '');
+        const elem = document.getElementById(targetId);
+        if (elem) {
+          e.preventDefault();
+          elem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      };
+
+      return (
+        <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }} className="inline-block">
+          <a href={to} onClick={handleAnchorClick} className={combinedClasses} {...props}>
+            {content}
+          </a>
+        </motion.div>
+      );
+    }
+
     return (
       <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }} className="inline-block">
         <Link to={to} className={combinedClasses} {...props}>

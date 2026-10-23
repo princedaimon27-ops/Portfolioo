@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import About from '../components/sections/About';
-import Certifications from '../components/sections/Certifications';
-import Contact from '../components/sections/Contact';
 
 const AboutPage = () => {
   useEffect(() => {
@@ -9,10 +7,8 @@ const AboutPage = () => {
   }, []);
 
   return (
-    <main className="pt-24 bg-[#0A0A0A] min-h-screen">
-      <About showFull={true} />
-      <Certifications />
-      <Contact />
+    <main className="pt-20 md:pt-24 bg-[#0A0A0A] min-h-screen">
+      <About showFull={true} className="border-t-0 pt-4 md:pt-6 pb-12 md:pb-16 bg-[#111114]" />
     </main>
   );
 };

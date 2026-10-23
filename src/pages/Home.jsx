@@ -9,15 +9,24 @@ import Contact from '../components/sections/Contact';
 
 const Home = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // If arriving with a hash, smooth scroll to it
+    if (window.location.hash) {
+      const id = window.location.hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 150);
+      }
+    }
   }, []);
 
   return (
     <main>
       <Hero />
-      <About showFull={false} />
-      <Expertise showAll={false} />
-      <Projects limit={4} showHeader={true} />
+      <About showFull={true} />
+      <Expertise showAll={true} />
+      <Projects limit={null} showHeader={true} />
       <Skills />
       <Certifications />
       <Contact />

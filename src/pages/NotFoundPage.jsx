@@ -4,7 +4,7 @@ import Button from '../components/ui/Button';
 
 const NotFoundPage = () => {
   return (
-    <main className="min-h-screen pt-40 pb-24 bg-[#0A0A0A] flex flex-col items-center justify-center text-center px-6 relative overflow-hidden">
+    <main className="min-h-[75vh] pt-28 pb-16 bg-[#0A0A0A] flex flex-col items-center justify-center text-center px-6 relative overflow-hidden">
       <div className="w-96 h-96 bg-[#FF6B1A]/10 blur-[140px] pointer-events-none rounded-full absolute" />
 
       <h1 className="text-8xl font-black text-[#FF6B1A] mb-4 drop-shadow-[0_0_30px_rgba(255,107,26,0.5)]">

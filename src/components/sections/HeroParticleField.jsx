@@ -31,7 +31,7 @@ const HeroParticleField = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[450px] md:h-[520px] flex items-center justify-center pointer-events-none select-none">
+    <div className="relative w-full h-[280px] sm:h-[360px] md:h-[440px] lg:h-[500px] flex items-center justify-center pointer-events-none select-none">
       {/* Central Soft Radial Glow (~260px) */}
       <motion.div
         className="absolute w-[260px] h-[260px] rounded-full pointer-events-none"

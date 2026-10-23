@@ -26,12 +26,12 @@ const itemVariants = {
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] pt-32 pb-20 md:pt-40 md:pb-28 flex items-center bg-grid-pattern overflow-hidden">
+    <section id="home" className="relative pt-24 pb-12 md:pt-28 md:pb-16 flex items-center bg-grid-pattern overflow-hidden scroll-mt-24">
       {/* Background Soft Glow Ambient */}
       <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#FF6B1A]/10 blur-[120px] pointer-events-none rounded-full" />
 
-      <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
           
           {/* Left Hero Content (7 cols) */}
           <motion.div
@@ -40,17 +40,10 @@ const Hero = () => {
             animate="visible"
             className="lg:col-span-7 flex flex-col items-start"
           >
-            {/* Eyebrow Label */}
-            <motion.div variants={itemVariants} className="mb-6">
-              <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest text-[#FF6B1A] bg-[#FF6B1A]/10 border border-[#FF6B1A]/20 uppercase">
-                DIGITAL MARKETING • CONTENT • SEO • SOCIAL MEDIA • ANALYTICS
-              </span>
-            </motion.div>
-
             {/* 3-Line Headline */}
             <motion.h1
               variants={itemVariants}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-6"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-5"
             >
               I create marketing <br className="hidden sm:inline" />
               that moves brands <br className="hidden sm:inline" />
@@ -62,18 +55,18 @@ const Hero = () => {
             {/* Positioning Subtext */}
             <motion.p
               variants={itemVariants}
-              className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed mb-8"
+              className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed mb-6"
             >
-              Hi, I’m <strong className="text-white font-semibold">Prince Daimon</strong>. I combine creative content strategy, search engine optimization, and data-backed performance campaigns to help ambitious brands increase reach and drive measurable revenue growth.
+              Hi, I'm <strong className="text-white font-semibold">Prince Daimon</strong>. I combine creative content strategy, search engine optimization, and data-backed performance campaigns to help ambitious brands increase reach and drive measurable revenue growth.
             </motion.p>
 
             {/* Dual Action CTAs */}
             <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4">
-              <Button to="/projects" variant="primary" size="lg" icon={ArrowRight}>
+              <Button to="#projects" variant="primary" size="lg" icon={ArrowRight}>
                 View My Work
               </Button>
-              <Button to="/contact" variant="secondary" size="lg" icon={ArrowUpRight}>
-                Let's Talk
+              <Button to="#contact" variant="secondary" size="lg" icon={ArrowUpRight}>
+                Let's Connect
               </Button>
             </motion.div>
           </motion.div>

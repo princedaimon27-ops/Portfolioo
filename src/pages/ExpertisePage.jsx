@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import Expertise from '../components/sections/Expertise';
-import Contact from '../components/sections/Contact';
 
 const ExpertisePage = () => {
   useEffect(() => {
@@ -8,9 +7,8 @@ const ExpertisePage = () => {
   }, []);
 
   return (
-    <main className="pt-24 bg-[#0A0A0A] min-h-screen">
-      <Expertise showAll={true} />
-      <Contact />
+    <main className="pt-20 md:pt-24 bg-[#0A0A0A] min-h-screen">
+      <Expertise showAll={true} className="border-t-0 pt-4 md:pt-6 pb-12 md:pb-16 bg-[#0A0A0A]" />
     </main>
   );
 };

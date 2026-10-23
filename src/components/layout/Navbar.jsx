@@ -1,34 +1,70 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, ArrowUpRight, Download } from 'lucide-react';
 import MobileMenu from './MobileMenu';
 
 const navLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
-  { name: 'Expertise', path: '/expertise' },
-  { name: 'Projects', path: '/projects' },
-  { name: 'Skills', path: '/skills' },
-  { name: 'Contact', path: '/contact' },
+  { name: 'Home', id: 'home' },
+  { name: 'About', id: 'about' },
+  { name: 'Expertise', id: 'expertise' },
+  { name: 'Projects', id: 'projects' },
+  { name: 'Skills', id: 'skills' },
+  { name: 'Contact', id: 'contact' },
 ];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
+  // Scroll spy effect to highlight active nav link as user scrolls / swipes
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
-  // Close mobile menu on route change
-  useEffect(() => {
-    setMobileMenuOpen(false);
-  }, [location]);
+      // Only calculate active section if on the main single-page layout
+      if (location.pathname === '/' || location.pathname === '') {
+        const scrollPosition = window.scrollY + 180;
+        let current = 'home';
+
+        for (const link of navLinks) {
+          const element = document.getElementById(link.id);
+          if (element) {
+            const top = element.offsetTop;
+            const height = element.offsetHeight;
+            if (scrollPosition >= top && scrollPosition < top + height) {
+              current = link.id;
+            }
+          }
+        }
+        setActiveSection(current);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [location.pathname]);
+
+  // Smooth scroll handler
+  const scrollToSection = (id) => {
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const elem = document.getElementById(id);
+        if (elem) {
+          elem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    } else {
+      const elem = document.getElementById(id);
+      if (elem) {
+        elem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  };
 
   return (
     <>
@@ -37,10 +73,13 @@ const Navbar = () => {
           scrolled ? 'py-3' : 'py-4'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
 
           {/* LEFT — Logo + "aimon" blended with the D in the logo */}
-          <Link to="/" className="relative flex items-center shrink-0 group">
+          <button
+            onClick={() => scrollToSection('home')}
+            className="relative flex items-center shrink-0 group focus:outline-none cursor-pointer bg-transparent border-0 p-0"
+          >
             <img
               src="/logo.png"
               alt="PD Logo"
@@ -62,7 +101,7 @@ const Navbar = () => {
             >
               aimon
             </span>
-          </Link>
+          </button>
 
           {/* CENTER — Nav links in their own pill */}
           <nav
@@ -73,19 +112,19 @@ const Navbar = () => {
             }`}
           >
             {navLinks.map((link) => {
-              const isActive = location.pathname === link.path;
+              const isActive = (location.pathname === '/' || location.pathname === '') && activeSection === link.id;
               return (
-                <Link
+                <button
                   key={link.name}
-                  to={link.path}
-                  className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                  onClick={() => scrollToSection(link.id)}
+                  className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer ${
                     isActive
                       ? 'bg-[#FF6B1A] text-white shadow-[0_0_12px_rgba(255,107,26,0.35)]'
                       : 'text-gray-400 hover:text-white hover:bg-white/5'
                   }`}
                 >
                   {link.name}
-                </Link>
+                </button>
               );
             })}
           </nav>
@@ -100,13 +139,13 @@ const Navbar = () => {
               <Download className="w-4 h-4" />
               Download CV
             </a>
-            <Link
-              to="/contact"
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#FF6B1A] text-white text-sm font-semibold hover:bg-[#e85f0f] transition-colors shadow-[0_0_15px_rgba(255,107,26,0.3)]"
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#FF6B1A] text-white text-sm font-semibold hover:bg-[#e85f0f] transition-colors shadow-[0_0_15px_rgba(255,107,26,0.3)] cursor-pointer"
             >
-              Hire Me
+              Let's Connect
               <ArrowUpRight className="w-4 h-4" />
-            </Link>
+            </button>
           </div>
 
           {/* Mobile Hamburger Toggle */}
@@ -125,7 +164,8 @@ const Navbar = () => {
         isOpen={mobileMenuOpen}
         onClose={() => setMobileMenuOpen(false)}
         navLinks={navLinks}
-        currentPath={location.pathname}
+        activeSection={activeSection}
+        onSelectSection={scrollToSection}
       />
     </>
   );

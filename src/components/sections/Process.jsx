@@ -5,13 +5,12 @@ import { processStepsData } from '../../data/processSteps';
 
 const Process = () => {
   return (
-    <section id="process" className="py-28 bg-[#111115] relative overflow-hidden border-t border-white/10">
+    <section id="process" className="py-12 md:py-16 bg-[#111115] relative overflow-hidden border-t border-white/10">
       {/* Top Glowing Section Divider Line */}
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#FF6B1A]/50 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
-          eyebrow="05 // STRATEGIC METHODOLOGY"
           title="From idea to impact."
           subtitle="A battle-tested 5-stage framework that transforms brand objectives into measurable digital growth."
         />
@@ -27,10 +26,10 @@ const Process = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-20px' }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="relative z-10 flex flex-col items-start p-6 rounded-2xl bg-white/[0.02] border border-white/5 backdrop-blur-md hover:border-[#FF6B1A]/30 transition-colors"
+              className="relative z-10 flex flex-col items-start p-5 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/5 backdrop-blur-md hover:border-[#FF6B1A]/30 transition-colors"
             >
               {/* Step Pill Header */}
-              <div className="w-12 h-12 rounded-full bg-[#0A0A0A] border-2 border-[#FF6B1A] text-[#FF6B1A] font-extrabold text-sm flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(255,107,26,0.3)]">
+              <div className="w-12 h-12 rounded-full bg-[#0A0A0A] border-2 border-[#FF6B1A] text-[#FF6B1A] font-extrabold text-sm flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(255,107,26,0.3)]">
                 {step.step}
               </div>
 
