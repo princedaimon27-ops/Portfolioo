@@ -258,7 +258,7 @@ const Expertise = ({ showAll = false, className = '' }) => {
                 role="button"
                 aria-label={`${item.title} card ${cardStyle.isActive ? '(Active)' : ''}`}
                 className={`absolute top-6 w-[440px] lg:w-[500px] h-[450px] rounded-3xl transition-colors duration-300 cursor-pointer ${
-                  cardStyle.isActive ? 'cursor-default' : 'cursor-pointer hover:brightness-110'
+                  cardStyle.isActive ? 'cursor-default' : 'cursor-pointer hover:brightness-110 hover:-translate-y-1'
                 }`}
               >
                 {/* Folder Top Tab Badge (simulates a tabbed document index) */}
@@ -278,7 +278,7 @@ const Expertise = ({ showAll = false, className = '' }) => {
                   className={`w-full h-full rounded-3xl p-7 lg:p-8 backdrop-blur-2xl border flex flex-col justify-between overflow-hidden relative transition-all duration-400 ${
                     cardStyle.isActive
                       ? 'bg-[#121217]/95 border-[#FF6B1A]/80 shadow-[0_25px_60px_rgba(0,0,0,0.9),0_0_35px_rgba(255,107,26,0.3)] ring-1 ring-[#FF6B1A]/40'
-                      : 'bg-[#0E0E12]/90 border-white/10 shadow-[0_15px_40px_rgba(0,0,0,0.7)]'
+                      : 'bg-[#0E0E12]/90 border-white/10 shadow-[0_15px_40px_rgba(0,0,0,0.7)] hover:border-white/40 hover:shadow-[0_15px_40px_rgba(0,0,0,0.7),0_0_25px_rgba(255,255,255,0.18)] transition-all duration-300'
                   }`}
                 >
                   {/* Glowing Ambient Top Corner (Active only) */}
@@ -290,8 +290,10 @@ const Expertise = ({ showAll = false, className = '' }) => {
 
                   {/* Top Ambient Edge Highlight Line */}
                   <div
-                    className={`absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#FF6B1A] to-transparent transition-opacity duration-300 ${
-                      cardStyle.isActive ? 'opacity-100' : 'opacity-10'
+                    className={`absolute top-0 left-0 right-0 h-[2px] transition-opacity duration-300 ${
+                      cardStyle.isActive
+                        ? 'bg-gradient-to-r from-transparent via-[#FF6B1A] to-transparent opacity-100'
+                        : 'bg-gradient-to-r from-transparent via-white to-transparent opacity-20 group-hover:opacity-60'
                     }`}
                   />
 

@@ -49,7 +49,7 @@ const MobileMenu = ({ isOpen, onClose, navLinks, activeSection, onSelectSection 
             </a>
             <Button
               to="#contact"
-              size="lg"
+              size="md"
               variant="primary"
               icon={ArrowUpRight}
               className="w-full"

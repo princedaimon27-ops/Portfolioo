@@ -57,7 +57,7 @@ const Contact = ({ className = '' }) => {
             <Button
               href="mailto:princedaimon27@gmail.com"
               variant="primary"
-              size="lg"
+              size="md"
               icon={ArrowRight}
             >
               Start a Conversation
@@ -65,7 +65,7 @@ const Contact = ({ className = '' }) => {
             <Button
               href="https://www.linkedin.com/in/prince-daimon-8920a23b2"
               variant="secondary"
-              size="lg"
+              size="md"
               icon={ArrowUpRight}
             >
               View LinkedIn

@@ -43,7 +43,7 @@ const Hero = () => {
             {/* 3-Line Headline */}
             <motion.h1
               variants={itemVariants}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-5"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-6 md:mb-8"
             >
               I create marketing <br className="hidden sm:inline" />
               that moves brands <br className="hidden sm:inline" />
@@ -55,17 +55,17 @@ const Hero = () => {
             {/* Positioning Subtext */}
             <motion.p
               variants={itemVariants}
-              className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed mb-6"
+              className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed mb-8"
             >
               Hi, I'm <strong className="text-white font-semibold">Prince Daimon</strong>. I combine creative content strategy, search engine optimization, and data-backed performance campaigns to help ambitious brands increase reach and drive measurable revenue growth.
             </motion.p>
 
             {/* Dual Action CTAs */}
             <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4">
-              <Button to="#projects" variant="primary" size="lg" icon={ArrowRight}>
+              <Button to="#projects" variant="primary" size="md" icon={ArrowRight}>
                 View My Work
               </Button>
-              <Button to="#contact" variant="secondary" size="lg" icon={ArrowUpRight}>
+              <Button to="#contact" variant="secondary" size="md" icon={ArrowUpRight}>
                 Let's Connect
               </Button>
             </motion.div>
