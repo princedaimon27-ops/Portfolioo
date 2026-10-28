@@ -10,7 +10,6 @@ import {
   ChevronLeft,
   ChevronRight,
   ArrowRight,
-  ArrowUpRight,
   FolderOpen,
 } from 'lucide-react';
 import SectionHeading from '../ui/SectionHeading';
@@ -24,6 +23,15 @@ const iconMap = {
   Target,
   Mail,
   BarChart3,
+};
+
+const expertiseIconPng = {
+  'social-media': '/Icons/social-media marketing.png',
+  'seo-optimization': '/Icons/seo & search optimization.png',
+  'content-marketing': '/Icons/content strategy.png',
+  'paid-advertising': '/Icons/Paid Advertising.png',
+  'email-marketing': '/Icons/email-marketing.png',
+  'analytics-cro': '/Icons/analytics & CRO.png',
 };
 
 const cardMeta = [
@@ -212,7 +220,7 @@ const Expertise = ({ showAll = false, className = '' }) => {
         {/* Desktop & Tablet: Layered Folder-Deck Horizontal Stage */}
         {/* ======================================================== */}
         <div
-          className="hidden md:flex relative justify-center items-center h-[520px] w-full px-4 overflow-visible"
+          className="hidden md:flex relative justify-center items-center h-[440px] w-full px-4 overflow-visible"
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
@@ -257,7 +265,7 @@ const Expertise = ({ showAll = false, className = '' }) => {
                 tabIndex={cardStyle.isActive ? 0 : -1}
                 role="button"
                 aria-label={`${item.title} card ${cardStyle.isActive ? '(Active)' : ''}`}
-                className={`absolute top-6 w-[440px] lg:w-[500px] h-[450px] rounded-3xl transition-colors duration-300 cursor-pointer ${
+                className={`absolute top-6 w-[440px] lg:w-[500px] h-[360px] rounded-3xl transition-colors duration-300 cursor-pointer ${
                   cardStyle.isActive ? 'cursor-default' : 'cursor-pointer hover:brightness-110 hover:-translate-y-1'
                 }`}
               >
@@ -275,10 +283,10 @@ const Expertise = ({ showAll = false, className = '' }) => {
 
                 {/* Main Card Shell */}
                 <div
-                  className={`w-full h-full rounded-3xl p-7 lg:p-8 backdrop-blur-2xl border flex flex-col justify-between overflow-hidden relative transition-all duration-400 ${
+                  className={`w-full h-full rounded-3xl p-6 lg:p-7 backdrop-blur-2xl border flex flex-col justify-start pt-6 gap-4 overflow-hidden relative transition-all duration-400 ${
                     cardStyle.isActive
-                      ? 'bg-[#121217]/95 border-[#FF6B1A]/80 shadow-[0_25px_60px_rgba(0,0,0,0.9),0_0_35px_rgba(255,107,26,0.3)] ring-1 ring-[#FF6B1A]/40'
-                      : 'bg-[#0E0E12]/90 border-white/10 shadow-[0_15px_40px_rgba(0,0,0,0.7)] hover:border-white/40 hover:shadow-[0_15px_40px_rgba(0,0,0,0.7),0_0_25px_rgba(255,255,255,0.18)] transition-all duration-300'
+                      ? 'bg-[#16161A]/95 bg-gradient-to-br from-[#FF6B1A]/10 to-transparent border-[#FF6B1A]/80 shadow-[0_25px_60px_rgba(0,0,0,0.9),0_0_35px_rgba(255,107,26,0.3)] ring-1 ring-[#FF6B1A]/40'
+                      : 'bg-[#16161A]/90 bg-gradient-to-br from-[#FF6B1A]/5 to-transparent border-white/10 shadow-[0_15px_40px_rgba(0,0,0,0.7)] hover:border-white/40 hover:shadow-[0_15px_40px_rgba(0,0,0,0.7),0_0_25px_rgba(255,255,255,0.18)] transition-all duration-300'
                   }`}
                 >
                   {/* Glowing Ambient Top Corner (Active only) */}
@@ -302,13 +310,9 @@ const Expertise = ({ showAll = false, className = '' }) => {
                     {/* Header Row: Icon + Meta Tag */}
                     <div className="flex items-center justify-between mb-5">
                       <div
-                        className={`w-13 h-13 w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 transition-all duration-300 ${
-                          cardStyle.isActive
-                            ? 'bg-[#FF6B1A] text-white shadow-[0_0_25px_rgba(255,107,26,0.65)] scale-105'
-                            : 'bg-white/5 border border-white/10 text-gray-400'
-                        }`}
+                        className={`w-13 h-13 w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 transition-all duration-300 backdrop-blur-md bg-white/5 border border-white/15 text-gray-300`}
                       >
-                        <IconComponent className="w-6 h-6" />
+                        {expertiseIconPng[item.id] ? <img src={expertiseIconPng[item.id]} alt={item.title} className="w-6 h-6 object-contain" /> : <IconComponent className="w-6 h-6" />}
                       </div>
 
                       <span
@@ -324,7 +328,7 @@ const Expertise = ({ showAll = false, className = '' }) => {
 
                     {/* Title */}
                     <h3
-                      className={`text-2xl lg:text-3xl font-extrabold tracking-tight mb-3 transition-colors duration-300 leading-tight ${
+                      className={`text-2xl lg:text-3xl font-extrabold tracking-tight mb-4 transition-colors duration-300 leading-tight ${
                         cardStyle.isActive ? 'text-white' : 'text-gray-300'
                       }`}
                     >
@@ -340,36 +344,7 @@ const Expertise = ({ showAll = false, className = '' }) => {
                       {item.description}
                     </p>
 
-                    {/* Active Card Strategic Deliverables Pill */}
-                    {cardStyle.isActive && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="mt-5 p-3 rounded-xl bg-white/[0.03] border border-white/10 flex items-center justify-between"
-                      >
-                        <span className="text-xs text-gray-400 font-medium">
-                          Execution Outcome
-                        </span>
-                        <span className="text-xs font-bold text-[#FF6B1A] font-mono tracking-wide">
-                          {meta.metric}
-                        </span>
-                      </motion.div>
-                    )}
-                  </div>
-
-                  {/* Card Bottom Accent Footer */}
-                  <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-gray-400 relative z-10">
-                    <span className="tracking-wide font-medium">{meta.badge}</span>
-                    <div className="flex items-center gap-1.5 text-[#FF6B1A] font-semibold">
-                      <span>{cardStyle.isActive ? 'Active Domain' : 'View Folder'}</span>
-                      <ArrowUpRight
-                        className={`w-4 h-4 transition-transform duration-300 ${
-                          cardStyle.isActive ? 'translate-x-0.5 -translate-y-0.5' : ''
-                        }`}
-                      />
-                    </div>
-                  </div>
+</div>
                 </div>
               </motion.div>
             );
@@ -405,21 +380,21 @@ const Expertise = ({ showAll = false, className = '' }) => {
                     TAB {itemNumber} / {totalFormatted}
                   </div>
 
-                  <div className="rounded-3xl p-6 sm:p-7 bg-[#121217] border border-[#FF6B1A]/70 shadow-[0_20px_45px_rgba(0,0,0,0.9),0_0_30px_rgba(255,107,26,0.25)] flex flex-col justify-between min-h-[380px] relative overflow-hidden">
+                  <div className="rounded-3xl p-5 sm:p-6 bg-[#16161A] bg-gradient-to-br from-[#FF6B1A]/5 to-transparent border border-[#FF6B1A]/70 shadow-[0_20px_45px_rgba(0,0,0,0.9),0_0_30px_rgba(255,107,26,0.25)] flex flex-col justify-start pt-4 gap-4 min-h-[320px] relative overflow-hidden">
                     {/* Top ambient orange strip */}
                     <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#FF6B1A] to-transparent" />
 
                     <div>
                       <div className="flex items-center justify-between mb-4 mt-1">
-                        <div className="w-12 h-12 rounded-2xl bg-[#FF6B1A] text-white flex items-center justify-center shadow-[0_0_20px_rgba(255,107,26,0.6)]">
-                          <IconComponent className="w-6 h-6" />
+                        <div className="w-12 h-12 rounded-2xl bg-white/5 backdrop-blur-md text-white flex items-center justify-center border border-white/15">
+                          {expertiseIconPng[item.id] ? <img src={expertiseIconPng[item.id]} alt={item.title} className="w-6 h-6 object-contain" /> : <IconComponent className="w-6 h-6" />}
                         </div>
                         <span className="text-[11px] font-semibold tracking-wider uppercase px-3 py-1 rounded-full bg-[#FF6B1A]/10 border border-[#FF6B1A]/40 text-[#FF6B1A]">
                           {meta.tag}
                         </span>
                       </div>
 
-                      <h3 className="text-xl sm:text-2xl font-extrabold text-white mb-2.5">
+                      <h3 className="text-xl sm:text-2xl font-extrabold text-white mb-3.5">
                         {item.title}
                       </h3>
                       <p className="text-sm text-gray-300 leading-relaxed mb-4">

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { Mail, ArrowUp, Share2, Globe } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 
 const navLinks = [
   { name: 'Home', id: 'home' },
@@ -73,7 +73,7 @@ const Footer = () => {
               className="p-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:text-[#FF6B1A] hover:border-[#FF6B1A]/40 transition-colors"
               aria-label="Email Prince Daimon"
             >
-              <Mail className="w-5 h-5" />
+              <img src="/Icons/email.png" alt="Email" className="w-6 h-6 object-contain" />
             </a>
             <a
               href="https://www.linkedin.com/in/prince-daimon-8920a23b2"
@@ -82,7 +82,7 @@ const Footer = () => {
               className="p-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:text-[#FF6B1A] hover:border-[#FF6B1A]/40 transition-colors"
               aria-label="LinkedIn Profile"
             >
-              <Share2 className="w-5 h-5" />
+              <img src="/Icons/linkedin.png" alt="LinkedIn" className="w-6 h-6 object-contain" />
             </a>
             <a
               href="https://github.com/princedaimon27-ops"
@@ -91,7 +91,7 @@ const Footer = () => {
               className="p-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:text-[#FF6B1A] hover:border-[#FF6B1A]/40 transition-colors"
               aria-label="GitHub Profile"
             >
-              <Globe className="w-5 h-5" />
+              <img src="/Icons/github.png" alt="GitHub" className="w-6 h-6 object-contain" />
             </a>
           </div>
         </div>

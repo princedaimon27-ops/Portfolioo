@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import SectionHeading from '../ui/SectionHeading';
 import { certificationsData } from '../../data/certifications';
 import Badge from '../ui/Badge';
@@ -35,8 +35,8 @@ const Certifications = ({ className = '' }) => {
 
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-3.5">
-                  <div className="w-10 h-10 rounded-xl bg-[#FF6B1A]/10 border border-[#FF6B1A]/30 text-[#FF6B1A] flex items-center justify-center group-hover:scale-105 group-hover:bg-[#FF6B1A] group-hover:text-white transition-all shadow-[0_0_12px_rgba(255,107,26,0.2)]">
-                    <Award className="w-5 h-5" />
+                  <div className="w-10 h-10 rounded-xl bg-[#FF6B1A]/10 border border-[#FF6B1A]/30 text-[#FF6B1A] flex items-center justify-center group-hover:scale-105 group-hover:bg-[#FF6B1A] group-hover:text-white transition-all shadow-[0_0_12px_rgba(255,107,26,0.2)] overflow-hidden">
+                    <img src="/Icons/award.png" alt="Award" className="w-6 h-6 object-contain drop-shadow-[0_0_6px_rgba(255,107,26,0.4)]" />
                   </div>
                   <span className="text-xs text-gray-400 font-mono bg-white/5 border border-white/10 px-2.5 py-0.5 rounded-full">
                     {cert.year}

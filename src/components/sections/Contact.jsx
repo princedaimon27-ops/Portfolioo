@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, ArrowRight, ArrowUpRight, Share2, Globe } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import Button from '../ui/Button';
 
 const Contact = ({ className = '' }) => {
@@ -84,7 +84,7 @@ const Contact = ({ className = '' }) => {
               href="mailto:princedaimon27@gmail.com"
               className="p-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-[#FF6B1A]/40 flex items-center justify-center gap-2.5 text-xs sm:text-sm text-gray-300 hover:text-white transition-colors min-w-0"
             >
-              <Mail className="w-4 h-4 text-[#FF6B1A] shrink-0" />
+              <img src="/Icons/email.png" alt="Email" className="w-5 h-5 shrink-0 rounded-md" />
               <span className="truncate">princedaimon27@gmail.com</span>
             </a>
 
@@ -94,7 +94,7 @@ const Contact = ({ className = '' }) => {
               rel="noopener noreferrer"
               className="p-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-[#FF6B1A]/40 flex items-center justify-center gap-2.5 text-xs sm:text-sm text-gray-300 hover:text-white transition-colors min-w-0"
             >
-              <Share2 className="w-4 h-4 text-[#FF6B1A] shrink-0" />
+              <img src="/Icons/linkedin.png" alt="LinkedIn" className="w-5 h-5 shrink-0 rounded-md" />
               <span>LinkedIn Profile</span>
             </a>
 
@@ -104,12 +104,12 @@ const Contact = ({ className = '' }) => {
               rel="noopener noreferrer"
               className="p-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-[#FF6B1A]/40 flex items-center justify-center gap-2.5 text-xs sm:text-sm text-gray-300 hover:text-white transition-colors min-w-0"
             >
-              <Globe className="w-4 h-4 text-[#FF6B1A] shrink-0" />
+              <img src="/Icons/github.png" alt="GitHub" className="w-5 h-5 shrink-0 rounded-md" />
               <span>GitHub Projects</span>
             </a>
 
             <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center gap-2.5 text-xs sm:text-sm text-gray-300 min-w-0">
-              <MapPin className="w-4 h-4 text-[#FF6B1A] shrink-0" />
+              <img src="/Icons/Location.png" alt="Location" className="w-5 h-5 shrink-0 rounded-md" />
               <span>Harare, Zimbabwe</span>
             </div>
           </motion.div>
