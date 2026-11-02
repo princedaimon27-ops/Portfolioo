@@ -87,7 +87,7 @@ const Navbar = () => {
               style={{ mixBlendMode: 'screen' }}
             />
             <span
-              className="text-white group-hover:text-[#FF6B1A] transition-colors"
+              className="text-white group-hover:text-[#1B76FF] transition-colors"
               style={{
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontWeight: 800,
@@ -107,8 +107,8 @@ const Navbar = () => {
           <nav
             className={`hidden md:flex items-center gap-1 px-3 py-2 rounded-full border border-white/10 transition-all duration-300 ${
               scrolled
-                ? 'bg-[#0A0A0A]/85 backdrop-blur-xl shadow-lg shadow-black/40'
-                : 'bg-[#0A0A0A]/50 backdrop-blur-md'
+                ? 'bg-[#020617]/85 backdrop-blur-xl shadow-lg shadow-black/40'
+                : 'bg-[#020617]/50 backdrop-blur-md'
             }`}
           >
             {navLinks.map((link) => {
@@ -119,7 +119,7 @@ const Navbar = () => {
                   onClick={() => scrollToSection(link.id)}
                   className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer ${
                     isActive
-                      ? 'bg-[#FF6B1A] text-white shadow-[0_0_12px_rgba(255,107,26,0.35)]'
+                      ? 'bg-[#1B76FF] text-white shadow-[0_0_12px_rgba(27, 118, 255,0.35)]'
                       : 'text-gray-400 hover:text-white hover:bg-white/5'
                   }`}
                 >
@@ -134,14 +134,14 @@ const Navbar = () => {
             <a
               href="/cv.pdf"
               download
-              className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 text-sm font-medium text-white hover:border-[#FF6B1A]/60 hover:text-[#FF6B1A] transition-colors"
+              className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 text-sm font-medium text-white hover:border-[#1B76FF]/60 hover:text-[#1B76FF] transition-colors"
             >
               <Download className="w-4 h-4" />
               Download CV
             </a>
             <button
               onClick={() => scrollToSection('contact')}
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#FF6B1A] text-white text-sm font-semibold hover:bg-[#e85f0f] transition-colors shadow-[0_0_15px_rgba(255,107,26,0.3)] cursor-pointer"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#1B76FF] text-white text-sm font-semibold hover:bg-[#1562D6] transition-colors shadow-[0_0_15px_rgba(27, 118, 255,0.3)] cursor-pointer"
             >
               Let's Connect
               <ArrowUpRight className="w-4 h-4" />
@@ -154,7 +154,7 @@ const Navbar = () => {
             className="md:hidden p-2 rounded-full text-gray-300 hover:text-white hover:bg-white/10 transition-colors focus:outline-none"
             aria-label="Toggle Navigation Menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6 text-[#FF6B1A]" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-6 h-6 text-[#1B76FF]" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </header>

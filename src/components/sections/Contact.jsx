@@ -8,22 +8,22 @@ const Contact = ({ className = '' }) => {
     <section
       id="contact"
       className={`relative overflow-hidden ${
-        className ? className : 'py-12 md:py-16 bg-[#111114] border-t border-white/10'
+        className ? className : 'py-12 md:py-16 bg-[#050B1B] border-t border-white/10'
       }`}
     >
       {/* Top Glowing Section Divider Line */}
       {!className?.includes('border-t-0') && (
-        <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#FF6B1A]/60 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#1B76FF]/60 to-transparent" />
       )}
 
       {/* Soft Orange Glow Radial Background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF6B1A]/10 blur-[160px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#1B76FF]/10 blur-[160px] pointer-events-none rounded-full" />
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="rounded-3xl bg-[#0A0A0A]/90 border border-white/15 p-6 sm:p-10 md:p-12 backdrop-blur-xl relative overflow-hidden text-center flex flex-col items-center shadow-[0_0_50px_rgba(0,0,0,0.8)]">
+        <div className="rounded-3xl bg-[#020617]/90 border border-white/15 p-6 sm:p-10 md:p-12 backdrop-blur-xl relative overflow-hidden text-center flex flex-col items-center shadow-[0_0_50px_rgba(0,0,0,0.8)]">
           
           {/* Subtle Glow Ring */}
-          <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#FF6B1A]/20 blur-3xl pointer-events-none rounded-full" />
+          <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#1B76FF]/20 blur-3xl pointer-events-none rounded-full" />
 
           {/* Main Headline */}
           <motion.h2
@@ -32,7 +32,7 @@ const Contact = ({ className = '' }) => {
             viewport={{ once: true }}
             className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight max-w-4xl mb-4"
           >
-            Have a brand that needs to move <span className="text-[#FF6B1A]">forward?</span>
+            Have a brand that needs to move <span className="text-[#1B76FF]">forward?</span>
           </motion.h2>
 
           {/* Subtext */}
@@ -82,9 +82,9 @@ const Contact = ({ className = '' }) => {
           >
             <a
               href="mailto:princedaimon27@gmail.com"
-              className="p-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-[#FF6B1A]/40 flex items-center justify-center gap-2.5 text-xs sm:text-sm text-gray-300 hover:text-white transition-colors min-w-0"
+              className="p-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-[#1B76FF]/40 flex items-center justify-center gap-2.5 text-xs sm:text-sm text-gray-300 hover:text-white transition-colors min-w-0"
             >
-              <img src="/Icons/email.png" alt="Email" className="w-5 h-5 shrink-0 rounded-md" />
+              <img src="/Icons/email.png" alt="Email" className="w-5 h-5 shrink-0 rounded-md" style={{ filter: 'brightness(0) invert(1)' }} />
               <span className="truncate">princedaimon27@gmail.com</span>
             </a>
 
@@ -92,9 +92,9 @@ const Contact = ({ className = '' }) => {
               href="https://www.linkedin.com/in/prince-daimon-8920a23b2"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-[#FF6B1A]/40 flex items-center justify-center gap-2.5 text-xs sm:text-sm text-gray-300 hover:text-white transition-colors min-w-0"
+              className="p-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-[#1B76FF]/40 flex items-center justify-center gap-2.5 text-xs sm:text-sm text-gray-300 hover:text-white transition-colors min-w-0"
             >
-              <img src="/Icons/linkedin.png" alt="LinkedIn" className="w-5 h-5 shrink-0 rounded-md" />
+              <img src="/Icons/linkedin.png" alt="LinkedIn" className="w-5 h-5 shrink-0 rounded-md" style={{ filter: 'brightness(0) invert(1)' }} />
               <span>LinkedIn Profile</span>
             </a>
 
@@ -102,14 +102,14 @@ const Contact = ({ className = '' }) => {
               href="https://github.com/princedaimon27-ops"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-[#FF6B1A]/40 flex items-center justify-center gap-2.5 text-xs sm:text-sm text-gray-300 hover:text-white transition-colors min-w-0"
+              className="p-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-[#1B76FF]/40 flex items-center justify-center gap-2.5 text-xs sm:text-sm text-gray-300 hover:text-white transition-colors min-w-0"
             >
               <img src="/Icons/github.png" alt="GitHub" className="w-5 h-5 shrink-0 rounded-md" />
               <span>GitHub Projects</span>
             </a>
 
             <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center gap-2.5 text-xs sm:text-sm text-gray-300 min-w-0">
-              <img src="/Icons/Location.png" alt="Location" className="w-5 h-5 shrink-0 rounded-md" />
+              <img src="/Icons/location.png" alt="Location" className="w-5 h-5 shrink-0 rounded-md" style={{ filter: 'brightness(0) invert(1)' }} />
               <span>Harare, Zimbabwe</span>
             </div>
           </motion.div>

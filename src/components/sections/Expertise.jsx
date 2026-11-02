@@ -159,16 +159,16 @@ const Expertise = ({ showAll = false, className = '' }) => {
     <section
       id="expertise"
       className={`scroll-mt-24 md:scroll-mt-28 relative overflow-hidden select-none ${
-        className ? className : 'py-16 md:py-24 bg-[#0A0A0A] border-t border-white/10'
+        className ? className : 'py-16 md:py-24 bg-[#020617] border-t border-white/10'
       }`}
     >
       {/* Top Glowing Divider */}
       {!className?.includes('border-t-0') && (
-        <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#FF6B1A]/40 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#1B76FF]/40 to-transparent" />
       )}
 
       {/* Atmospheric Background Glows */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-[#FF6B1A]/6 blur-[180px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-[#1B76FF]/6 blur-[180px] pointer-events-none rounded-full" />
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -184,7 +184,7 @@ const Expertise = ({ showAll = false, className = '' }) => {
           <div className="flex items-center gap-4 shrink-0 self-start md:self-end">
             {/* Position Counter Pill */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md">
-              <FolderOpen className="w-4 h-4 text-[#FF6B1A]" />
+              <FolderOpen className="w-4 h-4 text-[#1B76FF]" />
               <span className="font-mono text-xs font-bold text-white tracking-widest">
                 {activeNumber}
               </span>
@@ -199,7 +199,7 @@ const Expertise = ({ showAll = false, className = '' }) => {
               type="button"
               onClick={handlePrev}
               aria-label="Previous expertise card"
-              className="w-11 h-11 rounded-full bg-[#111115] border border-white/10 hover:border-[#FF6B1A]/60 flex items-center justify-center text-gray-300 hover:text-white hover:bg-[#FF6B1A]/10 transition-all duration-200 active:scale-95 shadow-[0_0_15px_rgba(0,0,0,0.5)] cursor-pointer group"
+              className="w-11 h-11 rounded-full bg-[#050B1B] border border-white/10 hover:border-[#1B76FF]/60 flex items-center justify-center text-gray-300 hover:text-white hover:bg-[#1B76FF]/10 transition-all duration-200 active:scale-95 shadow-[0_0_15px_rgba(0,0,0,0.5)] cursor-pointer group"
             >
               <ChevronLeft className="w-5 h-5 group-hover:-translate-x-0.5 transition-transform" />
             </button>
@@ -209,7 +209,7 @@ const Expertise = ({ showAll = false, className = '' }) => {
               type="button"
               onClick={handleNext}
               aria-label="Next expertise card"
-              className="w-11 h-11 rounded-full bg-[#111115] border border-white/10 hover:border-[#FF6B1A]/60 flex items-center justify-center text-gray-300 hover:text-white hover:bg-[#FF6B1A]/10 transition-all duration-200 active:scale-95 shadow-[0_0_15px_rgba(0,0,0,0.5)] cursor-pointer group"
+              className="w-11 h-11 rounded-full bg-[#050B1B] border border-white/10 hover:border-[#1B76FF]/60 flex items-center justify-center text-gray-300 hover:text-white hover:bg-[#1B76FF]/10 transition-all duration-200 active:scale-95 shadow-[0_0_15px_rgba(0,0,0,0.5)] cursor-pointer group"
             >
               <ChevronRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
             </button>
@@ -273,8 +273,8 @@ const Expertise = ({ showAll = false, className = '' }) => {
                 <div
                   className={`absolute -top-3.5 left-8 px-4 py-1 rounded-t-xl text-[11px] font-mono font-bold tracking-wider uppercase border-t border-x transition-all duration-300 z-20 ${
                     cardStyle.isActive
-                      ? 'bg-[#FF6B1A] text-white border-[#FF6B1A] shadow-[0_-4px_12px_rgba(255,107,26,0.4)]'
-                      : 'bg-[#18181D] text-gray-400 border-white/10 group-hover:text-white'
+                      ? 'bg-[#1B76FF] text-white border-[#1B76FF] shadow-[0_-4px_12px_rgba(27, 118, 255,0.4)]'
+                      : 'bg-[#081126] text-gray-400 border-white/10 group-hover:text-white'
                   }`}
                 >
                   <span className="mr-1.5 opacity-80">TAB</span>
@@ -285,13 +285,13 @@ const Expertise = ({ showAll = false, className = '' }) => {
                 <div
                   className={`w-full h-full rounded-3xl p-6 lg:p-7 backdrop-blur-2xl border flex flex-col justify-start pt-6 gap-4 overflow-hidden relative transition-all duration-400 ${
                     cardStyle.isActive
-                      ? 'bg-[#16161A]/95 bg-gradient-to-br from-[#FF6B1A]/10 to-transparent border-[#FF6B1A]/80 shadow-[0_25px_60px_rgba(0,0,0,0.9),0_0_35px_rgba(255,107,26,0.3)] ring-1 ring-[#FF6B1A]/40'
-                      : 'bg-[#16161A]/90 bg-gradient-to-br from-[#FF6B1A]/5 to-transparent border-white/10 shadow-[0_15px_40px_rgba(0,0,0,0.7)] hover:border-white/40 hover:shadow-[0_15px_40px_rgba(0,0,0,0.7),0_0_25px_rgba(255,255,255,0.18)] transition-all duration-300'
+                      ? 'bg-[#081126]/95 bg-gradient-to-br from-[#1B76FF]/10 to-transparent border-[#1B76FF]/80 shadow-[0_25px_60px_rgba(0,0,0,0.9),0_0_35px_rgba(27, 118, 255,0.3)] ring-1 ring-[#1B76FF]/40'
+                      : 'bg-[#081126]/90 bg-gradient-to-br from-[#1B76FF]/5 to-transparent border-white/10 shadow-[0_15px_40px_rgba(0,0,0,0.7)] hover:border-white/40 hover:shadow-[0_15px_40px_rgba(0,0,0,0.7),0_0_25px_rgba(255,255,255,0.18)] transition-all duration-300'
                   }`}
                 >
                   {/* Glowing Ambient Top Corner (Active only) */}
                   <div
-                    className={`absolute -top-24 -right-24 w-56 h-56 bg-[#FF6B1A] blur-3xl pointer-events-none rounded-full transition-opacity duration-500 ${
+                    className={`absolute -top-24 -right-24 w-56 h-56 bg-[#1B76FF] blur-3xl pointer-events-none rounded-full transition-opacity duration-500 ${
                       cardStyle.isActive ? 'opacity-30' : 'opacity-0'
                     }`}
                   />
@@ -300,7 +300,7 @@ const Expertise = ({ showAll = false, className = '' }) => {
                   <div
                     className={`absolute top-0 left-0 right-0 h-[2px] transition-opacity duration-300 ${
                       cardStyle.isActive
-                        ? 'bg-gradient-to-r from-transparent via-[#FF6B1A] to-transparent opacity-100'
+                        ? 'bg-gradient-to-r from-transparent via-[#1B76FF] to-transparent opacity-100'
                         : 'bg-gradient-to-r from-transparent via-white to-transparent opacity-20 group-hover:opacity-60'
                     }`}
                   />
@@ -318,7 +318,7 @@ const Expertise = ({ showAll = false, className = '' }) => {
                       <span
                         className={`text-xs font-semibold tracking-wider uppercase px-3 py-1 rounded-full border transition-all duration-300 ${
                           cardStyle.isActive
-                            ? 'bg-[#FF6B1A]/10 border-[#FF6B1A]/40 text-[#FF6B1A]'
+                            ? 'bg-[#1B76FF]/10 border-[#1B76FF]/40 text-[#1B76FF]'
                             : 'bg-white/5 border-white/10 text-gray-400'
                         }`}
                       >
@@ -376,20 +376,20 @@ const Expertise = ({ showAll = false, className = '' }) => {
                   className="w-full relative"
                 >
                   {/* Mobile Folder Tab Top Accent */}
-                  <div className="absolute -top-3 left-6 px-3.5 py-0.5 rounded-t-lg bg-[#FF6B1A] text-white text-[10px] font-mono font-bold tracking-wider uppercase z-20 shadow-[0_-2px_10px_rgba(255,107,26,0.4)]">
+                  <div className="absolute -top-3 left-6 px-3.5 py-0.5 rounded-t-lg bg-[#1B76FF] text-white text-[10px] font-mono font-bold tracking-wider uppercase z-20 shadow-[0_-2px_10px_rgba(27, 118, 255,0.4)]">
                     TAB {itemNumber} / {totalFormatted}
                   </div>
 
-                  <div className="rounded-3xl p-5 sm:p-6 bg-[#16161A] bg-gradient-to-br from-[#FF6B1A]/5 to-transparent border border-[#FF6B1A]/70 shadow-[0_20px_45px_rgba(0,0,0,0.9),0_0_30px_rgba(255,107,26,0.25)] flex flex-col justify-start pt-4 gap-4 min-h-[320px] relative overflow-hidden">
+                  <div className="rounded-3xl p-5 sm:p-6 bg-[#081126] bg-gradient-to-br from-[#1B76FF]/5 to-transparent border border-[#1B76FF]/70 shadow-[0_20px_45px_rgba(0,0,0,0.9),0_0_30px_rgba(27, 118, 255,0.25)] flex flex-col justify-start pt-4 gap-4 min-h-[320px] relative overflow-hidden">
                     {/* Top ambient orange strip */}
-                    <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#FF6B1A] to-transparent" />
+                    <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#1B76FF] to-transparent" />
 
                     <div>
                       <div className="flex items-center justify-between mb-4 mt-1">
                         <div className="w-12 h-12 rounded-2xl bg-white/5 backdrop-blur-md text-white flex items-center justify-center border border-white/15">
                           {expertiseIconPng[item.id] ? <img src={expertiseIconPng[item.id]} alt={item.title} className="w-6 h-6 object-contain" /> : <IconComponent className="w-6 h-6" />}
                         </div>
-                        <span className="text-[11px] font-semibold tracking-wider uppercase px-3 py-1 rounded-full bg-[#FF6B1A]/10 border border-[#FF6B1A]/40 text-[#FF6B1A]">
+                        <span className="text-[11px] font-semibold tracking-wider uppercase px-3 py-1 rounded-full bg-[#1B76FF]/10 border border-[#1B76FF]/40 text-[#1B76FF]">
                           {meta.tag}
                         </span>
                       </div>
@@ -403,7 +403,7 @@ const Expertise = ({ showAll = false, className = '' }) => {
 
                       <div className="p-3 rounded-xl bg-white/[0.04] border border-white/10 flex items-center justify-between">
                         <span className="text-xs text-gray-400">Execution Outcome</span>
-                        <span className="text-xs font-bold text-[#FF6B1A] font-mono">
+                        <span className="text-xs font-bold text-[#1B76FF] font-mono">
                           {meta.metric}
                         </span>
                       </div>
@@ -411,7 +411,7 @@ const Expertise = ({ showAll = false, className = '' }) => {
 
                     <div className="mt-6 pt-3.5 border-t border-white/10 flex items-center justify-between text-xs text-gray-400">
                       <span>{meta.badge}</span>
-                      <div className="flex items-center gap-1 text-[#FF6B1A] font-semibold">
+                      <div className="flex items-center gap-1 text-[#1B76FF] font-semibold">
                         <span>Swipe to explore</span>
                         <ArrowRight className="w-4 h-4" />
                       </div>
@@ -438,7 +438,7 @@ const Expertise = ({ showAll = false, className = '' }) => {
                   aria-label={`Go to slide ${idx + 1}`}
                   className={`transition-all duration-300 rounded-full cursor-pointer ${
                     isActive
-                      ? 'w-8 h-2.5 bg-[#FF6B1A] shadow-[0_0_12px_#FF6B1A]'
+                      ? 'w-8 h-2.5 bg-[#1B76FF] shadow-[0_0_12px_#1B76FF]'
                       : 'w-2.5 h-2.5 bg-white/20 hover:bg-white/40'
                   }`}
                 />

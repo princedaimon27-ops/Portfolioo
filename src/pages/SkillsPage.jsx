@@ -37,7 +37,7 @@ const SkillsPage = () => {
   }, []);
 
   return (
-    <main className="pt-20 md:pt-24 bg-[#0A0A0A] min-h-screen">
+    <main className="pt-20 md:pt-24 bg-[#020617] min-h-screen">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pt-4 md:pt-6 mb-8 md:mb-12">
         <SectionHeading
           title="Skills, Tools & Strategic Capabilities"
@@ -55,18 +55,18 @@ const SkillsPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.08 }}
-                className="p-6 sm:p-8 rounded-3xl bg-[#0A0A0A]/90 border border-white/15 backdrop-blur-xl shadow-[0_0_40px_rgba(0,0,0,0.6)] hover:border-[#FF6B1A]/50 transition-all duration-300 relative overflow-hidden flex flex-col justify-between group"
+                className="p-6 sm:p-8 rounded-3xl bg-[#020617]/90 border border-white/15 backdrop-blur-xl shadow-[0_0_40px_rgba(0,0,0,0.6)] hover:border-[#1B76FF]/50 transition-all duration-300 relative overflow-hidden flex flex-col justify-between group"
               >
                 {/* Subtle Corner Glow matching Contact page */}
-                <div className="absolute -top-16 -right-16 w-36 h-36 bg-[#FF6B1A]/10 blur-2xl pointer-events-none rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute -top-16 -right-16 w-36 h-36 bg-[#1B76FF]/10 blur-2xl pointer-events-none rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-2xl bg-[#FF6B1A]/10 border border-[#FF6B1A]/30 text-[#FF6B1A] flex items-center justify-center group-hover:scale-105 group-hover:bg-[#FF6B1A] group-hover:text-white transition-all shadow-[0_0_15px_rgba(255,107,26,0.2)]">
+                    <div className="w-12 h-12 rounded-2xl bg-[#1B76FF]/10 border border-[#1B76FF]/30 text-[#1B76FF] flex items-center justify-center group-hover:scale-105 group-hover:bg-[#1B76FF] group-hover:text-white transition-all shadow-[0_0_15px_rgba(27, 118, 255,0.2)]">
                       <Icon className="w-6 h-6" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white group-hover:text-[#FF6B1A] transition-colors">
+                      <h3 className="text-xl font-bold text-white group-hover:text-[#1B76FF] transition-colors">
                         {cat.title}
                       </h3>
                     </div>
@@ -81,9 +81,9 @@ const SkillsPage = () => {
                     {cat.skills.map((skill) => (
                       <div
                         key={skill}
-                        className="p-2.5 rounded-xl bg-white/5 border border-white/10 hover:border-[#FF6B1A]/40 transition-colors flex items-center gap-2 text-xs font-medium text-gray-200"
+                        className="p-2.5 rounded-xl bg-white/5 border border-white/10 hover:border-[#1B76FF]/40 transition-colors flex items-center gap-2 text-xs font-medium text-gray-200"
                       >
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#FF6B1A] shrink-0" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#1B76FF] shrink-0" />
                         <span className="truncate">{skill}</span>
                       </div>
                     ))}
@@ -95,7 +95,7 @@ const SkillsPage = () => {
         </div>
 
         {/* Carousel Section */}
-        <div className="rounded-3xl bg-[#0A0A0A]/90 border border-white/15 p-6 sm:p-8 backdrop-blur-xl shadow-[0_0_40px_rgba(0,0,0,0.6)] mb-8">
+        <div className="rounded-3xl bg-[#020617]/90 border border-white/15 p-6 sm:p-8 backdrop-blur-xl shadow-[0_0_40px_rgba(0,0,0,0.6)] mb-8">
           <div className="mb-4 text-center sm:text-left">
             <h3 className="text-lg font-bold text-white">Daily Execution Software</h3>
             <p className="text-xs text-gray-400 mt-1">Directly integrated into daily agency workflows and client execution sprints.</p>

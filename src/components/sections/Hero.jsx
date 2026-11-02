@@ -28,7 +28,7 @@ const Hero = () => {
   return (
     <section id="home" className="relative pt-24 pb-12 md:pt-28 md:pb-16 flex items-center bg-grid-pattern overflow-hidden scroll-mt-24">
       {/* Background Soft Glow Ambient */}
-      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#FF6B1A]/10 blur-[120px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#1B76FF]/10 blur-[120px] pointer-events-none rounded-full" />
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
@@ -47,7 +47,7 @@ const Hero = () => {
             >
               I create marketing <br className="hidden sm:inline" />
               that moves brands <br className="hidden sm:inline" />
-              <span className="text-[#FF6B1A] relative inline-block drop-shadow-[0_0_25px_rgba(255,107,26,0.4)]">
+              <span className="text-[#1B76FF] relative inline-block drop-shadow-[0_0_25px_rgba(27, 118, 255,0.4)]">
                 forward.
               </span>
             </motion.h1>

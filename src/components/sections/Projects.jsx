@@ -46,16 +46,16 @@ const Projects = ({ showHeader = true, className = '', initialLimit = 4, limit }
     <section
       id="projects"
       className={`scroll-mt-24 md:scroll-mt-28 relative overflow-hidden ${
-        className ? className : 'py-12 md:py-16 bg-[#111114] border-t border-white/10'
+        className ? className : 'py-12 md:py-16 bg-[#050B1B] border-t border-white/10'
       }`}
     >
       {/* Top Glowing Section Divider Line */}
       {showHeader && (
-        <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#FF6B1A]/50 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#1B76FF]/50 to-transparent" />
       )}
       
       {/* Background Accent */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-full max-w-[1440px] h-96 bg-[#FF6B1A]/5 blur-[140px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-full max-w-[1440px] h-96 bg-[#1B76FF]/5 blur-[140px] pointer-events-none rounded-full" />
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {showHeader && (
@@ -113,7 +113,7 @@ const Projects = ({ showHeader = true, className = '', initialLimit = 4, limit }
           <button
             type="button"
             onClick={handleToggle}
-            className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#FF6B1A] text-white font-semibold text-sm sm:text-base hover:bg-[#e85f0f] transition-all duration-300 shadow-[0_0_20px_rgba(255,107,26,0.3)] hover:shadow-[0_0_30px_rgba(255,107,26,0.5)] active:scale-95 cursor-pointer"
+            className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#1B76FF] text-white font-semibold text-sm sm:text-base hover:bg-[#1562D6] transition-all duration-300 shadow-[0_0_20px_rgba(27, 118, 255,0.3)] hover:shadow-[0_0_30px_rgba(27, 118, 255,0.5)] active:scale-95 cursor-pointer"
           >
             <span>{isExpanded ? 'Show Less' : 'View More Projects'}</span>
             {isExpanded ? (

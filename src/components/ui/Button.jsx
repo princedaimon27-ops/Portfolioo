@@ -14,12 +14,12 @@ const Button = ({
   iconPosition = 'right',
   ...props
 }) => {
-  const baseStyles = 'inline-flex items-center justify-center font-medium transition-all duration-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#FF6B1A]/50 disabled:opacity-50 disabled:cursor-not-allowed';
+  const baseStyles = 'inline-flex items-center justify-center font-medium transition-all duration-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#1B76FF]/50 disabled:opacity-50 disabled:cursor-not-allowed';
 
   const variants = {
-    primary: 'bg-[#FF6B1A] text-white hover:bg-[#ff7a2e] shadow-[0_0_20px_rgba(255,107,26,0.35)] hover:shadow-[0_0_30px_rgba(255,107,26,0.5)] border border-[#FF6B1A]',
-    secondary: 'bg-white/5 text-white hover:bg-white/10 border border-white/15 backdrop-blur-md hover:border-[#FF6B1A]/40',
-    outline: 'bg-transparent text-white border border-white/20 hover:border-[#FF6B1A] hover:text-[#FF6B1A]',
+    primary: 'bg-[#1B76FF] text-white hover:bg-[#3083FF] shadow-[0_0_20px_rgba(27, 118, 255,0.35)] hover:shadow-[0_0_30px_rgba(27, 118, 255,0.5)] border border-[#1B76FF]',
+    secondary: 'bg-white/5 text-white hover:bg-white/10 border border-white/15 backdrop-blur-md hover:border-[#1B76FF]/40',
+    outline: 'bg-transparent text-white border border-white/20 hover:border-[#1B76FF] hover:text-[#1B76FF]',
     ghost: 'bg-transparent text-gray-300 hover:text-white hover:bg-white/5',
   };
 

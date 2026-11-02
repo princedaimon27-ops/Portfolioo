@@ -11,8 +11,8 @@
   }
   
   body {
-    @apply bg-[#0A0A0A] text-[#F5F5F5] font-sans antialiased selection:bg-[#FF6B1A]/30 selection:text-white overflow-x-hidden min-h-screen;
-    background-color: #0A0A0A;
+    @apply bg-[#020617] text-[#F5F5F5] font-sans antialiased selection:bg-[#1B76FF]/30 selection:text-white overflow-x-hidden min-h-screen;
+    background-color: #020617;
   }
 }
 
@@ -29,16 +29,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #0A0A0A;
+  background: #020617;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #262626;
+  background: #1e293b;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #FF6B1A;
+  background: #1B76FF;
 }
 
 /* Seamless Marquee Infinite Carousel */

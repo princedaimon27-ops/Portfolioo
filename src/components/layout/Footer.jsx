@@ -37,9 +37,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#050505] border-t border-white/10 pt-10 md:pt-12 pb-8 md:pb-10 relative overflow-hidden">
+    <footer className="bg-[#01040E] border-t border-white/10 pt-10 md:pt-12 pb-8 md:pb-10 relative overflow-hidden">
       {/* Background glow gradient accent at footer bottom */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-[#FF6B1A]/5 blur-3xl pointer-events-none rounded-full" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-[#1B76FF]/5 blur-3xl pointer-events-none rounded-full" />
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-8 border-b border-white/10">
@@ -70,25 +70,25 @@ const Footer = () => {
               href="mailto:princedaimon27@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:text-[#FF6B1A] hover:border-[#FF6B1A]/40 transition-colors"
+              className="p-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:text-[#1B76FF] hover:border-[#1B76FF]/40 transition-colors"
               aria-label="Email Prince Daimon"
             >
-              <img src="/Icons/email.png" alt="Email" className="w-6 h-6 object-contain" />
+              <img src="/Icons/email.png" alt="Email" className="w-6 h-6 object-contain" style={{ filter: 'brightness(0) invert(1)' }} />
             </a>
             <a
               href="https://www.linkedin.com/in/prince-daimon-8920a23b2"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:text-[#FF6B1A] hover:border-[#FF6B1A]/40 transition-colors"
+              className="p-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:text-[#1B76FF] hover:border-[#1B76FF]/40 transition-colors"
               aria-label="LinkedIn Profile"
             >
-              <img src="/Icons/linkedin.png" alt="LinkedIn" className="w-6 h-6 object-contain" />
+              <img src="/Icons/linkedin.png" alt="LinkedIn" className="w-6 h-6 object-contain" style={{ filter: 'brightness(0) invert(1)' }} />
             </a>
             <a
               href="https://github.com/princedaimon27-ops"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:text-[#FF6B1A] hover:border-[#FF6B1A]/40 transition-colors"
+              className="p-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:text-[#1B76FF] hover:border-[#1B76FF]/40 transition-colors"
               aria-label="GitHub Profile"
             >
               <img src="/Icons/github.png" alt="GitHub" className="w-6 h-6 object-contain" />

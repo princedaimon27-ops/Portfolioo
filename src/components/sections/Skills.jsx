@@ -7,12 +7,12 @@ const Skills = ({ duration = 30, gap = '1.25rem', tools, className = '' }) => {
     <section
       id="skills"
       className={`scroll-mt-24 md:scroll-mt-28 relative overflow-hidden ${
-        className ? className : 'py-12 md:py-16 bg-[#0A0A0A] border-t border-white/10'
+        className ? className : 'py-12 md:py-16 bg-[#020617] border-t border-white/10'
       }`}
     >
       {/* Top Glowing Section Divider Line */}
       {!className?.includes('border-t-0') && (
-        <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#FF6B1A]/40 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#1B76FF]/40 to-transparent" />
       )}
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

@@ -5,9 +5,9 @@ import { processStepsData } from '../../data/processSteps';
 
 const Process = () => {
   return (
-    <section id="process" className="py-12 md:py-16 bg-[#111115] relative overflow-hidden border-t border-white/10">
+    <section id="process" className="py-12 md:py-16 bg-[#050B1B] relative overflow-hidden border-t border-white/10">
       {/* Top Glowing Section Divider Line */}
-      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#FF6B1A]/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#1B76FF]/50 to-transparent" />
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
@@ -17,7 +17,7 @@ const Process = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-6 relative">
           {/* Connector Line (Desktop) */}
-          <div className="hidden md:block absolute top-12 left-0 right-0 h-0.5 bg-gradient-to-r from-[#FF6B1A]/20 via-[#FF6B1A] to-[#FF6B1A]/20 -z-0" />
+          <div className="hidden md:block absolute top-12 left-0 right-0 h-0.5 bg-gradient-to-r from-[#1B76FF]/20 via-[#1B76FF] to-[#1B76FF]/20 -z-0" />
 
           {processStepsData.map((step, idx) => (
             <motion.div
@@ -26,10 +26,10 @@ const Process = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-20px' }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="relative z-10 flex flex-col items-start p-5 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/5 backdrop-blur-md hover:border-[#FF6B1A]/30 transition-colors"
+              className="relative z-10 flex flex-col items-start p-5 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/5 backdrop-blur-md hover:border-[#1B76FF]/30 transition-colors"
             >
               {/* Step Pill Header */}
-              <div className="w-12 h-12 rounded-full bg-[#0A0A0A] border-2 border-[#FF6B1A] text-[#FF6B1A] font-extrabold text-sm flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(255,107,26,0.3)]">
+              <div className="w-12 h-12 rounded-full bg-[#020617] border-2 border-[#1B76FF] text-[#1B76FF] font-extrabold text-sm flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(27, 118, 255,0.3)]">
                 {step.step}
               </div>
 

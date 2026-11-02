@@ -7,26 +7,28 @@ module.exports = {
     extend: {
       colors: {
         dark: {
-          DEFAULT: '#0A0A0A',
-          surface: '#111113',
+          DEFAULT: '#020617',
+          surface: '#050B1B',
           card: 'rgba(255, 255, 255, 0.03)',
         },
         brand: {
-          orange: '#FF6B1A',
-          particle: '#ff8a3d',
-          dark: '#0A0A0A',
-          charcoal: '#111113',
+          blue: '#1B76FF',
+          orange: '#1B76FF',
+          particle: '#3B8BFF',
+          dark: '#020617',
+          charcoal: '#050B1B',
         }
       },
       fontFamily: {
         sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        'glow-orange': '0 0 30px -5px rgba(255, 107, 26, 0.35)',
-        'glow-particle': '0 0 10px 2px rgba(255, 138, 61, 0.5)',
+        'glow-orange': '0 0 30px -5px rgba(27, 118, 255, 0.45)',
+        'glow-blue': '0 0 30px -5px rgba(27, 118, 255, 0.45)',
+        'glow-particle': '0 0 10px 2px rgba(59, 139, 255, 0.6)',
       },
       backgroundImage: {
-        'radial-glow': 'radial-gradient(circle, rgba(255,107,26,0.25) 0%, rgba(10,10,10,0) 70%)',
+        'radial-glow': 'radial-gradient(circle, rgba(27,118,255,0.25) 0%, rgba(2,6,23,0) 70%)',
       }
     },
   },

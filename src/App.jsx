@@ -16,7 +16,7 @@ import NotFoundPage from './pages/NotFoundPage';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-[#0A0A0A] text-[#F5F5F5] flex flex-col font-sans selection:bg-[#FF6B1A]/30 selection:text-white">
+      <div className="min-h-screen bg-[#020617] text-[#F5F5F5] flex flex-col font-sans selection:bg-[#1B76FF]/30 selection:text-white">
         <Navbar />
         <div className="flex-grow">
           <Routes>

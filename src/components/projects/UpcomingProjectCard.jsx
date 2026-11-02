@@ -15,12 +15,12 @@ const UpcomingProjectCard = ({
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 15 }}
       transition={{ duration: 0.4, delay: index * 0.08 }}
-      className="group relative rounded-3xl bg-[#0A0A0A]/90 border border-dashed border-white/20 overflow-hidden backdrop-blur-xl hover:border-[#FF6B1A]/40 transition-all duration-300 shadow-[0_0_40px_rgba(0,0,0,0.6)] flex flex-col justify-between h-full"
+      className="group relative rounded-3xl bg-[#020617]/90 border border-dashed border-white/20 overflow-hidden backdrop-blur-xl hover:border-[#1B76FF]/40 transition-all duration-300 shadow-[0_0_40px_rgba(0,0,0,0.6)] flex flex-col justify-between h-full"
     >
       <div className="flex flex-col flex-1">
         {/* Placeholder Thumbnail Container matching ProjectCard height */}
         <div className="relative w-full h-48 sm:h-52 md:h-56 bg-[#060608] border-b border-white/10 flex flex-col items-center justify-center p-4 text-center select-none">
-          <div className="w-12 h-12 rounded-2xl bg-[#FF6B1A]/10 border border-[#FF6B1A]/30 flex items-center justify-center mb-2.5 text-[#FF6B1A] group-hover:scale-110 transition-transform">
+          <div className="w-12 h-12 rounded-2xl bg-[#1B76FF]/10 border border-[#1B76FF]/30 flex items-center justify-center mb-2.5 text-[#1B76FF] group-hover:scale-110 transition-transform">
             <Sparkles className="w-5 h-5 animate-pulse" />
           </div>
           <p className="text-xs font-semibold text-gray-400 tracking-wider uppercase">
@@ -65,10 +65,10 @@ const UpcomingProjectCard = ({
       {/* Footer Info */}
       <div className="p-5 sm:p-6 pt-3 border-t border-white/10 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 mt-auto">
         <div className="flex items-center gap-1.5 text-xs text-gray-400">
-          <Clock className="w-3.5 h-3.5 text-[#FF6B1A]" />
+          <Clock className="w-3.5 h-3.5 text-[#1B76FF]" />
           <span>Case Study in Production</span>
         </div>
-        <span className="inline-flex items-center justify-center text-[11px] font-semibold tracking-wider uppercase text-[#FF6B1A] bg-[#FF6B1A]/10 px-3 py-1.5 rounded-full border border-[#FF6B1A]/20">
+        <span className="inline-flex items-center justify-center text-[11px] font-semibold tracking-wider uppercase text-[#1B76FF] bg-[#1B76FF]/10 px-3 py-1.5 rounded-full border border-[#1B76FF]/20">
           Coming Soon
         </span>
       </div>
