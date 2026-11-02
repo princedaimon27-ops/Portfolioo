@@ -91,7 +91,7 @@ const Footer = () => {
               className="p-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:text-[#1B76FF] hover:border-[#1B76FF]/40 transition-colors"
               aria-label="GitHub Profile"
             >
-              <img src="/Icons/github.png" alt="GitHub" className="w-6 h-6 object-contain" />
+              <img src="/Icons/github.png" alt="GitHub" className="w-6 h-6 object-contain" style={{ filter: 'brightness(0) invert(1)' }} />
             </a>
           </div>
         </div>
